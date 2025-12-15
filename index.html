@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luke Brogy© — Official Website</title>
+  <style>
+    :root{--bg:#07070a;--card:#0f1016;--txt:#e9e9ef;--mut:#a7a7b5;--acc:#7af0c6}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+    background:radial-gradient(1200px 800px at 70% 20%, #1a1130 0%, transparent 55%),
+               radial-gradient(900px 700px at 20% 80%, #102b24 0%, transparent 55%),
+               var(--bg); color:var(--txt)}
+    .wrap{max-width:980px;margin:0 auto;padding:28px}
+    .hero{padding:26px 22px;border:1px solid rgba(255,255,255,.08);background:rgba(15,16,22,.72);
+      backdrop-filter: blur(10px); border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.45)}
+    h1{margin:0 0 8px;font-size:34px;letter-spacing:.4px}
+    .tag{color:var(--mut);line-height:1.5}
+    .pill{display:inline-block;margin-top:14px;padding:10px 14px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.25);color:var(--txt)}
+    .grid{display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:16px}
+    .card{grid-column:span 6;padding:16px;border-radius:16px;border:1px solid rgba(255,255,255,.08);
+      background:rgba(15,16,22,.62)}
+    .card h2{margin:0 0 6px;font-size:18px}
+    .card p{margin:0;color:var(--mut);line-height:1.55}
+    .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    a.btn{padding:11px 14px;border-radius:12px;text-decoration:none;color:var(--bg);background:var(--acc);font-weight:700}
+    a.ghost{padding:11px 14px;border-radius:12px;text-decoration:none;color:var(--txt);
+      border:1px solid rgba(255,255,255,.14);background:rgba(0,0,0,.18)}
+    footer{margin-top:22px;color:var(--mut);font-size:13px}
+    @media (max-width:720px){.card{grid-column:span 12} h1{font-size:28px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>Luke Brogy©</h1>
+      <div class="tag">Artista visionario — immagini, poesia, simboli, rose e luce. <span style="color:var(--acc)">In arrivo:</span> galleria, opere, contatti.</div>
+      <div class="pill">Official Website • Portfolio • Updates</div>
+
+      <div class="grid">
+        <div class="card">
+          <h2>Galleria</h2>
+          <p>Selezione opere (presto). Vuoi che la galleria sia a griglia, a “carosello”, o entrambe?</p>
+        </div>
+        <div class="card">
+          <h2>Chi è Luke Brogy©</h2>
+          <p>Bio breve + manifesto artistico. (Lo scrivo io, in stile potente e pulito.)</p>
+        </div>
+        <div class="card">
+          <h2>Contatti</h2>
+          <p>Email: <strong>lukebrogy.art@proton.me</strong> • Social: Instagram / TikTok / Pinterest (da inserire).</p>
+        </div>
+        <div class="card">
+          <h2>Collezioni</h2>
+          <p>“REGINA EROTICA™”, “Tunnel di Rose”, “Lupo Maestro”… sezioni dedicate con copertine.</p>
+        </div>
+      </div>
+
+      <div class="btns">
+        <a class="btn" href="#contatti">Contattami</a>
+        <a class="ghost" href="#">Galleria (presto)</a>
+      </div>
+
+      <footer id="contatti">
+        © <span id="y"></span> Luke Brogy© — Tutti i diritti riservati.
+      </footer>
+    </section>
+  </div>
+  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+</body>
+</html>
