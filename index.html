@@ -2,70 +2,351 @@
 <html lang="it">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Luke Brogy© — Official Website</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Luke Brogy©</title>
+  <meta name="description" content="Luke Brogy© — Erotico. Sacro. Visionario." />
   <style>
-    :root{--bg:#07070a;--card:#0f1016;--txt:#e9e9ef;--mut:#a7a7b5;--acc:#7af0c6}
-    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
-    background:radial-gradient(1200px 800px at 70% 20%, #1a1130 0%, transparent 55%),
-               radial-gradient(900px 700px at 20% 80%, #102b24 0%, transparent 55%),
-               var(--bg); color:var(--txt)}
-    .wrap{max-width:980px;margin:0 auto;padding:28px}
-    .hero{padding:26px 22px;border:1px solid rgba(255,255,255,.08);background:rgba(15,16,22,.72);
-      backdrop-filter: blur(10px); border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.45)}
-    h1{margin:0 0 8px;font-size:34px;letter-spacing:.4px}
-    .tag{color:var(--mut);line-height:1.5}
-    .pill{display:inline-block;margin-top:14px;padding:10px 14px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.25);color:var(--txt)}
-    .grid{display:grid;gap:14px;grid-template-columns:repeat(12,1fr);margin-top:16px}
-    .card{grid-column:span 6;padding:16px;border-radius:16px;border:1px solid rgba(255,255,255,.08);
-      background:rgba(15,16,22,.62)}
-    .card h2{margin:0 0 6px;font-size:18px}
-    .card p{margin:0;color:var(--mut);line-height:1.55}
-    .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-    a.btn{padding:11px 14px;border-radius:12px;text-decoration:none;color:var(--bg);background:var(--acc);font-weight:700}
-    a.ghost{padding:11px 14px;border-radius:12px;text-decoration:none;color:var(--txt);
-      border:1px solid rgba(255,255,255,.14);background:rgba(0,0,0,.18)}
-    footer{margin-top:22px;color:var(--mut);font-size:13px}
-    @media (max-width:720px){.card{grid-column:span 12} h1{font-size:28px}}
+    :root{
+      --bg:#05050a;
+      --ink:#ececf2;
+      --mut:#a7a7b8;
+      --veil:rgba(255,255,255,.08);
+      --card:rgba(10,10,18,.56);
+      --accent:#7af0c6;
+      --rose:#ff3b7a;
+      --gold:#d8c07a;
+      --shadow:rgba(0,0,0,.55);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--ink);
+      font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      background:
+        radial-gradient(1200px 800px at 65% 12%, rgba(122,240,198,.16) 0%, transparent 55%),
+        radial-gradient(900px 700px at 18% 82%, rgba(255,59,122,.13) 0%, transparent 58%),
+        radial-gradient(700px 500px at 80% 70%, rgba(216,192,122,.08) 0%, transparent 60%),
+        var(--bg);
+      overflow-x:hidden;
+    }
+    a{color:inherit}
+    .wrap{max-width:1080px;margin:0 auto;padding:24px 18px 64px}
+    .top{
+      display:flex;align-items:center;justify-content:space-between;gap:14px;
+      padding:10px 0 2px;
+    }
+    .sigillo{
+      display:flex;align-items:center;gap:10px;
+      letter-spacing:.14em;text-transform:uppercase;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      font-weight:700;font-size:12px;color:rgba(236,236,242,.78);
+    }
+    .dot{
+      width:10px;height:10px;border-radius:999px;
+      background:radial-gradient(circle at 30% 30%, var(--accent), rgba(122,240,198,.15));
+      box-shadow:0 0 18px rgba(122,240,198,.35);
+      animation:pulse 2.3s ease-in-out infinite;
+    }
+    @keyframes pulse{
+      0%,100%{transform:scale(.92); filter:brightness(1)}
+      50%{transform:scale(1.08); filter:brightness(1.12)}
+    }
+    .nav{
+      display:flex;gap:10px;flex-wrap:wrap;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+    }
+    .nav a{
+      text-decoration:none;
+      padding:10px 12px;
+      border:1px solid var(--veil);
+      border-radius:999px;
+      background:rgba(0,0,0,.18);
+      backdrop-filter: blur(8px);
+      color:rgba(236,236,242,.82);
+    }
+    .nav a:hover{border-color:rgba(255,255,255,.18)}
+    .hero{
+      margin-top:18px;
+      border:1px solid var(--veil);
+      background:linear-gradient(180deg, rgba(10,10,18,.64), rgba(10,10,18,.38));
+      border-radius:22px;
+      padding:28px 18px 26px;
+      box-shadow:0 18px 50px var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .mist{
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(600px 220px at 50% 20%, rgba(255,255,255,.06), transparent 70%),
+        radial-gradient(420px 240px at 70% 70%, rgba(122,240,198,.08), transparent 70%),
+        radial-gradient(420px 240px at 25% 80%, rgba(255,59,122,.07), transparent 70%);
+      filter: blur(6px);
+      opacity:.9;
+      pointer-events:none;
+      animation: drift 10s ease-in-out infinite;
+    }
+    @keyframes drift{
+      0%,100%{transform:translate3d(0,0,0)}
+      50%{transform:translate3d(0,-10px,0)}
+    }
+    .hero-inner{position:relative; z-index:1; display:grid; gap:18px; grid-template-columns: 1.15fr .85fr;}
+    @media (max-width:900px){.hero-inner{grid-template-columns:1fr}}
+    .h1{
+      font-size:44px; line-height:1.05; margin:0;
+      letter-spacing:.02em;
+    }
+    @media (max-width:520px){.h1{font-size:34px}}
+    .lead{
+      margin:10px 0 0;
+      color:rgba(236,236,242,.78);
+      line-height:1.65;
+      font-size:15.5px;
+      max-width:52ch;
+    }
+    .mantra{
+      margin-top:14px;
+      border-left:2px solid rgba(122,240,198,.45);
+      padding:10px 12px;
+      color:rgba(236,236,242,.86);
+      background:rgba(0,0,0,.18);
+      border-radius:10px;
+      font-style:italic;
+    }
+    .mantra b{color:var(--accent); font-style:normal}
+    .right{
+      display:flex; flex-direction:column; gap:12px; justify-content:flex-end;
+    }
+    .sealcard{
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:18px;
+      background:rgba(0,0,0,.18);
+      padding:14px 14px 12px;
+    }
+    .kicker{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      text-transform:uppercase; letter-spacing:.14em;
+      font-size:11px; color:rgba(236,236,242,.62);
+    }
+    .bigline{
+      margin:10px 0 0;
+      font-size:16px; line-height:1.5;
+      color:rgba(236,236,242,.88);
+    }
+    .bigline .rose{color:var(--rose)}
+    .bigline .gold{color:var(--gold)}
+    .cta{
+      display:flex; gap:10px; flex-wrap:wrap;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      margin-top:8px;
+    }
+    .btn{
+      text-decoration:none;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(0,0,0,.20);
+      color:rgba(236,236,242,.86);
+    }
+    .btn.primary{
+      border-color:rgba(122,240,198,.28);
+      box-shadow:0 0 0 1px rgba(122,240,198,.06), 0 12px 30px rgba(0,0,0,.35);
+      position:relative;
+      overflow:hidden;
+    }
+    .btn.primary:before{
+      content:"";
+      position:absolute; inset:-40%;
+      background:radial-gradient(circle at 30% 30%, rgba(122,240,198,.22), transparent 55%);
+      animation: pulse2 2.6s ease-in-out infinite;
+      pointer-events:none;
+    }
+    @keyframes pulse2{
+      0%,100%{transform:scale(.95); opacity:.7}
+      50%{transform:scale(1.06); opacity:1}
+    }
+    .btn span{position:relative; z-index:1}
+    .section{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:14px;
+    }
+    .card{
+      grid-column:span 6;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(10,10,18,.46);
+      border-radius:20px;
+      padding:16px;
+      box-shadow:0 14px 36px rgba(0,0,0,.35);
+    }
+    .card.wide{grid-column:span 12}
+    @media (max-width:900px){.card{grid-column:span 12}}
+    .card h2{
+      margin:0 0 8px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      letter-spacing:.08em; text-transform:uppercase;
+      font-size:12px; color:rgba(236,236,242,.72);
+    }
+    .card p{margin:0; color:rgba(236,236,242,.78); line-height:1.65}
+    .grid{
+      margin-top:10px;
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:10px;
+    }
+    .ph{
+      grid-column:span 4;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.09);
+      background:
+        radial-gradient(220px 160px at 35% 30%, rgba(255,59,122,.14), transparent 60%),
+        radial-gradient(220px 160px at 70% 70%, rgba(122,240,198,.13), transparent 60%),
+        rgba(0,0,0,.18);
+      aspect-ratio: 4/3;
+      position:relative;
+      overflow:hidden;
+    }
+    @media (max-width:900px){.ph{grid-column:span 6}}
+    @media (max-width:520px){.ph{grid-column:span 12}}
+    .ph:after{
+      content:"";
+      position:absolute; inset:0;
+      background:linear-gradient(180deg, transparent, rgba(0,0,0,.35));
+    }
+    .ph span{
+      position:absolute; left:12px; bottom:10px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      font-size:12px; letter-spacing:.06em;
+      color:rgba(236,236,242,.78);
+      z-index:1;
+    }
+    .footer{
+      margin-top:22px;
+      color:rgba(236,236,242,.62);
+      font-size:12px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      letter-spacing:.06em;
+      display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between;
+      padding:10px 2px 0;
+    }
+    .footer a{opacity:.86; text-decoration:none}
+    .fadein{opacity:0; transform:translateY(10px); transition:opacity .9s ease, transform .9s ease}
+    .fadein.show{opacity:1; transform:translateY(0)}
   </style>
 </head>
+
 <body>
   <div class="wrap">
-    <section class="hero">
-      <h1>Luke Brogy©</h1>
-      <div class="tag">Artista visionario — immagini, poesia, simboli, rose e luce. <span style="color:var(--acc)">In arrivo:</span> galleria, opere, contatti.</div>
-      <div class="pill">Official Website • Portfolio • Updates</div>
+    <div class="top">
+      <div class="sigillo"><span class="dot"></span> LUKE BROGY©</div>
+      <nav class="nav">
+        <a href="#visione">Visione</a>
+        <a href="#galleria">Galleria</a>
+        <a href="#collezioni">Collezioni</a>
+        <a href="#contatto">Contatto</a>
+      </nav>
+    </div>
 
-      <div class="grid">
-        <div class="card">
-          <h2>Galleria</h2>
-          <p>Selezione opere (presto). Vuoi che la galleria sia a griglia, a “carosello”, o entrambe?</p>
+    <section class="hero fadein">
+      <div class="mist"></div>
+      <div class="hero-inner">
+        <div>
+          <h1 class="h1">Stai sognando.</h1>
+          <p class="lead">
+            Il desiderio è vivo. La soglia è sacra.<br/>
+            Non tutto è concesso — ma ciò che resta, <em>attira</em>.
+          </p>
+          <div class="mantra">
+            Entra in punta di cuore.<br/>
+            <b>Privilegiato</b> non perché sei invitato — ma perché hai capito.
+          </div>
         </div>
-        <div class="card">
-          <h2>Chi è Luke Brogy©</h2>
-          <p>Bio breve + manifesto artistico. (Lo scrivo io, in stile potente e pulito.)</p>
-        </div>
-        <div class="card">
-          <h2>Contatti</h2>
-          <p>Email: <strong>lukebrogy.art@proton.me</strong> • Social: Instagram / TikTok / Pinterest (da inserire).</p>
-        </div>
-        <div class="card">
-          <h2>Collezioni</h2>
-          <p>“REGINA EROTICA™”, “Tunnel di Rose”, “Lupo Maestro”… sezioni dedicate con copertine.</p>
+
+        <div class="right">
+          <div class="sealcard">
+            <div class="kicker">Sigillo</div>
+            <div class="bigline">
+              <span class="rose">Rosa</span> e ombra. <span class="gold">Luce</span> che protegge.<br/>
+              Un battito sotto la pelle — senza profanare.
+            </div>
+            <div class="cta">
+              <a class="btn primary" href="#galleria"><span>Apri la galleria</span></a>
+              <a class="btn" href="#contatto"><span>Accesso</span></a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="btns">
-        <a class="btn" href="#contatti">Contattami</a>
-        <a class="ghost" href="#">Galleria (presto)</a>
-      </div>
-
-      <footer id="contatti">
-        © <span id="y"></span> Luke Brogy© — Tutti i diritti riservati.
-      </footer>
     </section>
+
+    <section id="visione" class="section">
+      <div class="card wide fadein">
+        <h2>Visione</h2>
+        <p>
+          L’arte non spiega: <strong>incanta</strong>.<br/>
+          Qui l’erotismo non si consuma — vibra. E il sacro non giudica — custodisce.<br/>
+          Se senti di essere dentro, sei già dentro.
+        </p>
+      </div>
+    </section>
+
+    <section id="galleria" class="section">
+      <div class="card wide fadein">
+        <h2>Galleria</h2>
+        <p>Inseriremo qui le tue opere vere. Per ora, tre “stanze” segnaposto (le sostituiamo con immagini reali appena me le mandi).</p>
+        <div class="grid">
+          <div class="ph"><span>REGINA EROTICA™</span></div>
+          <div class="ph"><span>Tunnel di Rose</span></div>
+          <div class="ph"><span>Lupo Maestro</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="collezioni" class="section">
+      <div class="card fadein">
+        <h2>Collezioni</h2>
+        <p>
+          Capitoli selezionati. Pochi. Incisi.<br/>
+          Ogni collezione è una soglia diversa.
+        </p>
+      </div>
+      <div class="card fadein">
+        <h2>Rituale</h2>
+        <p>
+          Scorri lentamente. Non cercare “tutto”.<br/>
+          Qui vale ciò che resta addosso.
+        </p>
+      </div>
+    </section>
+
+    <section id="contatto" class="section">
+      <div class="card wide fadein">
+        <h2>Contatto</h2>
+        <p>
+          Se devi scrivere, saprai quando.<br/>
+          <strong>Email:</strong> <a href="mailto:lukebrogyart@proton.me">lukebrogyart@proton.me</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Luke Brogy©</div>
+      <div>
+        <a href="#visione">Visione</a> ·
+        <a href="#galleria">Galleria</a> ·
+        <a href="#contatto">Contatto</a>
+      </div>
+    </div>
   </div>
-  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    const obs = new IntersectionObserver((entries)=> {
+      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("show"); });
+    }, {threshold: 0.12});
+    document.querySelectorAll(".fadein").forEach(el => obs.observe(el));
+  </script>
 </body>
 </html>
